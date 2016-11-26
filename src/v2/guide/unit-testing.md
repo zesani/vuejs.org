@@ -51,7 +51,7 @@ describe('MyComponent', () => {
   it('sets the correct default data', () => {
     expect(typeof MyComponent.data).toBe('function')
     const defaultData = MyComponent.data()
-    expect(defaultData.message).to.eql('hello!')
+    expect(defaultData.message).toBe('hello!')
   })
 
   // Inspect the component instance on mount
@@ -106,7 +106,7 @@ describe('MyComponent', () => {
 
     expect(getRenderedText(MyComponent, {
       msg: 'Bye'
-    })).toBe('Bye')
+    })).to.eql('Bye')
   })
 })
 ```
